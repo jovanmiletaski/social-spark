@@ -481,7 +481,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      owns_social_account: {
+        Args: { _social_account_id: string }
+        Returns: boolean
+      }
     }
     Enums: {
       analysis_type:
