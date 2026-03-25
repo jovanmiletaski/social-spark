@@ -24,21 +24,21 @@ export function SocialProofSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section ref={ref} className="py-20 px-6 border-t border-border/50">
+    <section ref={ref} className="py-24 md:py-28 px-6 border-t border-border/30">
       <div
-        className={`max-w-5xl mx-auto transition-all duration-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        className={`max-w-5xl mx-auto transition-all duration-1000 ease-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         {/* Platform logos */}
-        <p className="text-center text-xs font-medium text-muted-foreground uppercase tracking-widest mb-8">
+        <p className="text-center text-[11px] font-semibold text-muted-foreground/60 uppercase tracking-[0.2em] mb-10">
           Track every major platform
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 mb-20">
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 mb-24">
           {logos.map((name) => (
             <span
               key={name}
-              className="text-sm font-medium text-muted-foreground/60 hover:text-muted-foreground transition-colors"
+              className="text-[14px] font-medium text-muted-foreground/40 hover:text-muted-foreground/70 transition-colors duration-300 cursor-default"
             >
               {name}
             </span>
@@ -46,18 +46,18 @@ export function SocialProofSection() {
         </div>
 
         {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-border bg-card p-6 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+              className="group rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-7 hover:border-border hover:shadow-[0_8px_30px_hsl(var(--primary)/0.06)] hover:-translate-y-0.5 transition-all duration-500 ease-out"
             >
-              <p className="text-sm text-foreground leading-relaxed mb-5">
+              <p className="text-[14px] text-foreground/90 leading-[1.7] mb-6 font-normal">
                 "{t.quote}"
               </p>
               <div>
-                <p className="text-sm font-medium text-foreground">{t.name}</p>
-                <p className="text-xs text-muted-foreground">{t.role}</p>
+                <p className="text-[13px] font-semibold text-foreground">{t.name}</p>
+                <p className="text-[12px] text-muted-foreground mt-0.5">{t.role}</p>
               </div>
             </div>
           ))}
