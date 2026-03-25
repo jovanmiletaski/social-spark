@@ -39,38 +39,38 @@ export function FeaturesSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="features" ref={ref} className="py-24 px-6">
+    <section id="features" ref={ref} className="py-28 md:py-32 px-6">
       <div
-        className={`max-w-5xl mx-auto transition-all duration-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        className={`max-w-5xl mx-auto transition-all duration-1000 ease-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="text-center mb-16">
-          <p className="text-xs font-medium text-primary uppercase tracking-widest mb-3">
+        <div className="text-center mb-20">
+          <p className="text-[11px] font-semibold text-primary uppercase tracking-[0.2em] mb-4">
             Features
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-foreground tracking-[-0.03em] leading-[1.1]">
             Everything you need to grow
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+          <p className="mt-5 text-[16px] text-muted-foreground max-w-[500px] mx-auto leading-[1.6]">
             Powerful tools designed for creators, marketers, and teams who want to
             understand and improve their social presence.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((f, i) => (
             <div
               key={i}
-              className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+              className="group rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-7 hover:border-primary/25 hover:shadow-[0_8px_30px_hsl(var(--primary)/0.06)] hover:-translate-y-0.5 transition-all duration-500 ease-out"
             >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="w-11 h-11 rounded-[14px] bg-primary/[0.08] flex items-center justify-center mb-5 group-hover:bg-primary/[0.14] group-hover:shadow-sm transition-all duration-500">
                 <f.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-base font-semibold text-foreground mb-2">
+              <h3 className="text-[15px] font-semibold text-foreground mb-2 tracking-[-0.01em]">
                 {f.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-[13px] text-muted-foreground leading-[1.7]">
                 {f.desc}
               </p>
             </div>
