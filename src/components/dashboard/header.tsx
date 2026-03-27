@@ -2,6 +2,7 @@ import { Search, Bell } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 
 interface HeaderProps {
@@ -26,6 +27,8 @@ export function DashboardHeader({ className, userName = "Mostafizur" }: HeaderPr
             className="pl-9 w-64 bg-muted/50 border-border"
           />
         </div>
+
+        <ThemeToggle />
 
         <Button variant="ghost" size="icon" className="relative text-muted-foreground hover:text-foreground">
           <Bell className="h-5 w-5" />
