@@ -30,7 +30,7 @@ export function AutomationOverviewCard({ onAnalyze }: AutomationOverviewCardProp
         <CardTitle className="text-base font-semibold text-foreground">Automation Overview</CardTitle>
         <div className="flex items-center gap-2">
           <Select defaultValue="weekly">
-            <SelectTrigger className="h-8 w-24 text-xs"><SelectValue /></SelectTrigger>
+            <SelectTrigger className="h-8 w-[90px] text-xs shrink-0"><SelectValue /></SelectTrigger>
             <SelectContent>
               <SelectItem value="daily">Daily</SelectItem>
               <SelectItem value="weekly">Weekly</SelectItem>

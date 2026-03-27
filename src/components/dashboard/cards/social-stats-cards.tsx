@@ -81,12 +81,12 @@ export function SocialStatsCards() {
               </div>
               <Button
                 onClick={() => { setSelectedPlatform(platform.name); setAiModalOpen(true) }}
-                className="w-full mt-3 h-7 text-xs opacity-0 group-hover:opacity-100 transition-opacity bg-white/20 hover:bg-white/30 text-inherit backdrop-blur-sm border-0"
+                className="w-full mt-3 h-7 text-[10px] sm:text-xs opacity-0 group-hover:opacity-100 transition-opacity bg-white/20 hover:bg-white/30 text-inherit backdrop-blur-sm border-0 truncate px-1.5"
                 variant="ghost"
                 size="sm"
               >
-                <Sparkles className="h-3 w-3 mr-1" />
-                Analyze with AI
+                <Sparkles className="h-3 w-3 shrink-0" />
+                <span className="truncate">Analyze with AI</span>
               </Button>
             </CardContent>
           </Card>
